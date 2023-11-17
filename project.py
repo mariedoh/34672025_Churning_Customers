@@ -61,6 +61,7 @@ if permissionToProceed.lower() == "yes":
     if button:
         use = pd.DataFrame([user_input], columns=features)
         prediction = model.predict(use.values.reshape(1, -1))[0]
+        st.write(f"Confidence: {0.7368}")
         if prediction == 0:
             st.write("This customer will not churn")
         else:
